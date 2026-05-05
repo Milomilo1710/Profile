@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f5f9ff; color: #0a2540; }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      z-index: 1000;
+    }
+
+    header h1 { font-size: 20px; font-weight: 600; }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #0a2540;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #007aff; }
+
+    section { padding: 100px 60px; }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #5f6c7b;
+      animation: fadeUp 1.2s ease forwards;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 12px 28px;
+      background: #007aff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeUp 1.4s ease forwards;
+    }
+
+    .btn:hover { background: #005fcc; }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    .about, .contact {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #5f6c7b;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MyPortfolio</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Xin chào, tôi là Designer</h2>
+  <p>Thiết kế UI/UX tối giản, tinh tế và hiện đại</p>
+  <a href="#projects" class="btn">Xem dự án</a>
+</section>
+
+<section id="projects">
+  <h2 style="margin-bottom:30px">Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>E-commerce UI</h3>
+      <p>Thiết kế web bán hàng hiện đại</p>
+    </div>
+    <div class="card">
+      <h3>LMS Dashboard</h3>
+      <p>Giao diện quản lý học tập</p>
+    </div>
+    <div class="card">
+      <h3>School Website</h3>
+      <p>Website trường học tối giản</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>Tôi là UI/UX Designer với kinh nghiệm thiết kế web bán hàng, LMS và website giáo dục. Tập trung vào trải nghiệm người dùng và giao diện tinh gọn.</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2>Contact</h2>
+  <form>
+    <input type="text" placeholder="Tên của bạn">
+    <input type="email" placeholder="Email">
+    <textarea rows="5" placeholder="Tin nhắn"></textarea>
+    <button class="btn">Gửi</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 MyPortfolio
+</footer>
+
+</body>
+</html>
